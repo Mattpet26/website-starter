@@ -1,0 +1,42 @@
+body {
+    background-color: bisque;
+}
+
+nav > ul > li {
+    display: inline;
+    padding: 3.5px;
+    border: solid 2.5px black;
+    margin: 5px 20px 20px 40px;
+    background-color: white;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section > #missionstatement {
+    border: solid 2px;
+}
+
+#puppy-section {
+    text-align: center;
+}
+
+#puppypic {
+    border: solid 1.5px;
+
+}
+
+article > #wheredo {
+    text-align: right;
+}
+
+#review {
+    height: 150px;
+    width: 150px;
+    border: solid 2px;
+}
+
+
