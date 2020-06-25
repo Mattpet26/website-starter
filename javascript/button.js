@@ -1,4 +1,7 @@
-
- var name = prompt("Please enter your name")
-if (name !=null) {
-"Why," + name + "!" + "What a fine name!"
+function myFunction() {
+    var dog = prompt('Please enter your dogs name!');
+    if (dog != null) {
+        document.getElementById("ddog").innerHTML =
+        "Why, " + dog + "! What an excellent name!";
+      }
+  }
