@@ -1,35 +1,48 @@
 'use strict'
 
-
 function askUserName(){
     var internalUserName = prompt('What is your name?');
     document.write('<h2>' + 'Welcome '+ internalUserName + '</h2>');
-    '<h2>Welcome Roger</h2>'
     return internalUserName;
 }
-
-// askUserName(); // value of internalUserName not the variable name
-
-
-// console.log(externalUserName);
-
 
 function confirmContinue(userName){ // the function is accepting a parameter
     confirm(userName + " Welcome to our website!");
 }
 
-function dogAdopt(){
+function getDogAdoptQuestion(){
     var dogAdopt;
-    dogAdopt = prompt('Are you looking to adopt a puppy today?');
+    dogAdopt = prompt('Are you looking to adopt a puppy today? "yes" or "no"');
+    //here is a while loop
+    while (dogAdopt.toLowerCase() != 'no' && dogAdopt != 'yes'){  //to.LowerCase makes the answer lowercase to work
+        dogAdopt = prompt('Are you looking to adopt a puppy today?');
+    }
     return dogAdopt
 }
 
 function checkLight(dogAdoptQuestion){
     if(dogAdoptQuestion === 'yes'){
-        alert('Great! Check out the website and please email us with questions!')
+        alert('Great! Check out the website and a specialist will be with you soon!')
     } else {
         alert('No worries, feel free to look around! We have some amazing dogs and staff');
     }
+}
+
+function forceTest(){ // for loop
+    for(var i =0; i < 15; i++){
+    var userAnswer = prompt('Please verify you are human, enter the number ""72"')
+    //parseInt changes answer into intiger
+    if(parseInt(userAnswer) === 72){
+        alert('You passed our test, you are human!')
+        break; 
+    //5 chances to guess a number between 1 and 100
+    // If they pass they can adopt a puppy, if not no adoption
+    } else{
+        alert('Sorry, please try again!')
+    }
+
+    }
+
 }
 
 function adopt(dogAdoptQuestion){
@@ -48,8 +61,12 @@ function adopt(dogAdoptQuestion){
 
 
 
+
+
+
 var externalUserName = askUserName(); // value of internalUserName not the variable name
 confirmContinue(externalUserName);  // this is passing an argument
-var dogAdoptQuestion = dogAdopt();
+var dogAdoptQuestion = getDogAdoptQuestion();
 checkLight(dogAdoptQuestion);
 adopt(dogAdoptQuestion);
+forceTest();

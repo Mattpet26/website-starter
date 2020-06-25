@@ -46,4 +46,8 @@ article > #wheredo {
     border: solid 2px;
 }
 
-
+footer {
+    text-align: center;
+    padding: 12px;
+    font-size: smaller;
+    
